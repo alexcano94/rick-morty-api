@@ -1,10 +1,8 @@
 import { ObjectId } from 'mongodb';
 import supertest from 'supertest';
-import app from '../../server';
+import server from './../server';
 import { closeTestDB, connectToTestDabase, collections } from '../../src/helpers/database';
 
-
-const server = app.listen(8080);
 const fakeRequest = supertest(server);
 
 beforeAll(async () => await connectToTestDabase());
