@@ -4,7 +4,7 @@
   "description": "REST API to retrive Rick & Morty data and user information",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build ./index.ts -o ./dist",
     "prestart": "npm run build",
     "start": "node .",
     "dev": "nodemon index.ts",
@@ -19,6 +19,7 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
+    "@vercel/ncc": "^0.34.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^8.25.0",
